@@ -1,0 +1,36 @@
+name: Render resume.html
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'index.html'
+
+jobs:
+  render-resume-html:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Node Install
+      run: npm ci
+
+    - name: Render Resume HTML
+      run: npx resumed render resume.json -o index.html
+
+    - name: Push New HTML
+      run: |
+        git config --global user.name "CI Build Artifacts"
+        git config --global user.emaul "signalwalker@users.noreply.github.com"
+        git stash push index.html
+        git checkout render
+        git stash pop
+        git commit index.html -m 'ci: render resume.html'
+        git push

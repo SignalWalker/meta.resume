@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "jsonresume-theme-stackoverflow": "github:phoinixi/jsonresume-theme-stackoverflow",
+    "resumed": "^3.0.1"
+  }
+}

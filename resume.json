@@ -1,0 +1,237 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Ashurst Walker",
+    "label": "Software Developer",
+    "image": "https://ashwalker.net/images/ash.png",
+    "email": "ashurstwalker@gmail.com",
+    "phone": "(706) 818-4248",
+    "url": "https://ashwalker.net",
+    "summary": "I am a recent graduate from the University of Georgia with a degree in computer science and 2 years of work experience, ranging from low-level system driver development to user interface design.",
+    "location": {
+      "postalCode": "GA 31401",
+      "city": "Savannah",
+      "countryCode": "US",
+      "region": "Georgia"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "SignalWalker",
+        "url": "https://github.com/SignalWalker"
+      },
+      {
+        "network": "Mastodon",
+        "username": "@ash@social.ashwalker.net",
+        "url": "https://social.ashwalker.net/users/ash"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "ashurst-walker",
+        "url": "https://www.linkedin.com/in/ashurst-walker/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Olyseus",
+      "location": "Limassol, Cyprus (Remote)",
+      "description": "3D mapping startup",
+      "position": "Software Developer",
+      "url": "https://olyseus.com/",
+      "startDate": "2021-01-01",
+      "endDate": "2022-05-31",
+      "summary": "Developed a driver for fast data transfer between devices, libraries for interfacing with DJI drones, and algorithms for recognizing and georeferencing the positions of data collection devices.",
+      "keywords": [
+        "C++",
+        "Rust",
+        "Python",
+        "CMake",
+        "Meson",
+        "Nix",
+        "NVMe",
+        "Qt",
+        "DJI",
+        "CUDA",
+        "TensorRT",
+        "PyTorch",
+        "Embedded"
+      ],
+      "highlights": [
+        "Created a cross-platform, userspace NVMe driver in C++ and developed a component for its use within a cross-platform Qt application",
+        "Modified a Windows-only Qt application to add native support for Linux",
+        "Developed Rust & C++ libraries for working with DJI's drone SDKs",
+        "Developed an application for automatic camera calibratation for object detection using machine learning",
+        "Developed an imgui-based application in Rust & C++ for streaming real-time video from a remote drone platform",
+        "Implemented algorithms from academic articles for GPS-based georeferencing of spatial data and transforming that data between various frames of reference",
+        "Developed functions for performing YOLOv5 image processing with TensorRT",
+        "Used Nix, CMake, and Meson to create a reproducible build system for the above tools"
+      ]
+    },
+    {
+      "name": "UGA Center for Geospatial Research",
+      "location": "Athens, Georgia, United States",
+      "description": "Geospatial technology research lab",
+      "position": "Augmented Reality Research Assistant",
+      "url": "https://cgr.uga.edu/",
+      "startDate": "2019-03-01",
+      "endDate": "2019-12-14",
+      "summary": "Maintained & improved an augmented reality sandbox allowing people to manipulate sand to learn about geological processes.",
+      "keywords": [
+        "C++",
+        "Rust",
+        "Python",
+        "UI",
+        "Distributed"
+      ],
+      "highlights": [
+        "Developed software for real-time geographical analysis of elevation data gathered from a physical box of sand, the results of which were projected back onto the sandbox",
+        "Optimized analysis & reprojection algorithms to improve response times from ~2-4 seconds down to ~100 milliseconds",
+        "Implemented algorithms from academic sources for transformation and projection of pointcloud data",
+        "Used Rust to implement network I/O for the above applications",
+        "Used Python to implement geograpical analysis functions and to render user interfaces",
+        "Documented processes used to implement the above, for future implementors",
+        "Developed and documented a process for calibrating a LiDAR + multispectral camera assembly for use in drone imagine of foliage"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Georgia",
+      "url": "https://www.uga.edu/",
+      "area": "Computer Science",
+      "studyType": "Bachelor",
+      "startDate": "2015-08-01",
+      "endDate": "2019-12-14",
+      "courses": []
+    }
+  ],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Graphics Programming",
+      "level": "Advanced",
+      "keywords": [
+        "Vulkan",
+        "GLSL",
+        "WGSL"
+      ]
+    },
+    {
+      "name": "Network Programming",
+      "level": "Intermediate",
+      "keywords": [
+        "TCP",
+        "UDP",
+        "Peer-to-Peer"
+      ]
+    },
+    {
+      "name": "System Administration",
+      "level": "Intermediate",
+      "keywords": [
+        "Linux",
+        "Nix",
+        "systemd",
+        "nginx",
+        "DNS"
+      ]
+    },
+    {
+      "name": "Web Development",
+      "level": "Beginner",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "Django",
+        "Elixir"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Music",
+      "keywords": [
+        "Piano",
+        "Guitar",
+        "French Horn"
+      ]
+    },
+    {
+      "name": "Writing"
+    },
+    {
+      "name": "Hiking",
+      "keywords": [
+        "Yellowstone",
+        "OSMP - Boulder, CO",
+        "Appalachian Mountains"
+      ]
+    },
+    {
+      "name": "Design"
+    },
+    {
+      "name": "Electronics"
+    }
+  ],
+  "projects": [
+    {
+      "type": "library",
+      "name": "Eightfold",
+      "description": "3D spatial partitioning library",
+      "url": "https://github.com/SignalWalker/eightfold",
+      "image": "https://github.com/SignalWalker/eightfold/raw/main/assets/doc/logo.svg",
+      "startDate": "2022-10-20",
+      "keywords": [
+        "Rust",
+        "glTF",
+        "Octree",
+        "Vulkan",
+        "DevOps"
+      ],
+      "highlights": [
+        "Implementing memory/cpu-efficient spatial partitioning data structures in Rust",
+        "Utilities for deserialization of 3D data and re-serialization into glTF",
+        "Automatically built and tested using GitHub actions"
+      ]
+    },
+    {
+      "name": "ashwalker.net",
+      "description": "Self-hosted cloud services",
+      "url": "https://github.com/SignalWalker/nix.net.ashwalker",
+      "startDate": "2022-08-12",
+      "keywords": [
+        "Cloud",
+        "Nix",
+        "systemd",
+        "nginx",
+        "PHP",
+        "PostgreSQL",
+        "Elixir",
+        "Python",
+        "DNS",
+        "Wireguard"
+      ],
+      "highlights": [
+        "Built using Nix flakes, allowing stateless reproducibility for the entire system and every service hosted by it -- the whole system can be rebuilt with a single command"
+      ]
+    },
+    {
+      "type": "game",
+      "name": "Ruin Architect"
+    }
+  ],
+  "meta": {
+    "theme": "jsonresume-theme-stackoverflow",
+    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+    "version": "v1.0.0"
+  }
+}
