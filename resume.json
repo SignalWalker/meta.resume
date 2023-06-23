@@ -223,10 +223,6 @@
       "highlights": [
         "Built using Nix flakes, allowing stateless reproducibility for the entire system and every service hosted by it -- the whole system can be rebuilt with a single command"
       ]
-    },
-    {
-      "type": "game",
-      "name": "Ruin Architect"
     }
   ],
   "meta": {
