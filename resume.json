@@ -3,7 +3,6 @@
   "basics": {
     "name": "Ashurst Walker",
     "label": "Software Developer",
-    "image": "https://ashwalker.net/images/ash.png",
     "email": "ashurstwalker@gmail.com",
     "phone": "(706) 818-4248",
     "url": "https://ashwalker.net",
@@ -106,7 +105,6 @@
       "courses": []
     }
   ],
-  "publications": [],
   "skills": [
     {
       "name": "Graphics Programming",
@@ -155,33 +153,6 @@
       "fluency": "Native speaker"
     }
   ],
-  "interests": [
-    {
-      "name": "Music",
-      "keywords": [
-        "Piano",
-        "Guitar",
-        "French Horn"
-      ]
-    },
-    {
-      "name": "Writing"
-    },
-    {
-      "name": "Hiking",
-      "keywords": [
-        "Yellowstone",
-        "OSMP - Boulder, CO",
-        "Appalachian Mountains"
-      ]
-    },
-    {
-      "name": "Design"
-    },
-    {
-      "name": "Electronics"
-    }
-  ],
   "projects": [
     {
       "type": "library",
@@ -195,7 +166,7 @@
         "glTF",
         "Octree",
         "Vulkan",
-        "DevOps"
+        "CI"
       ],
       "highlights": [
         "Implementing memory/cpu-efficient spatial partitioning data structures in Rust",
@@ -223,6 +194,81 @@
       "highlights": [
         "Built using Nix flakes, allowing stateless reproducibility for the entire system and every service hosted by it -- the whole system can be rebuilt with a single command"
       ]
+    },
+    {
+      "name": "Flint",
+      "description": "Vulkan abstraction library",
+      "url": "https://gitlab.com/SignalWalker/Flint/-/tree/0.4.0",
+      "startDate": "2019-06-22",
+      "endDate": "2021-05-11",
+      "keywords": [
+        "Vulkan",
+        "Rust",
+        "GLSL",
+        "WGSL",
+        "SPIR-V"
+      ],
+      "highlights": [
+        "A Rust library abstracting over the Vulkan graphics API, including utilities for automatically generating graphics pipelines from shader source files, mesh optimization, and GPU memory allocation"
+      ]
+    },
+    {
+      "name": "Stonemason",
+      "description": "A functional, typed data language",
+      "url": "https://github.com/SignalWalker/Stonemason",
+      "startDate": "2023-03-18",
+      "keywords": [
+        "Rust",
+        "Language Design",
+        "UI"
+      ],
+      "highlights": [
+        "A functional, typed language designed for configuration & UI templating"
+      ]
+    },
+    {
+      "name": "Ruin Architect",
+      "description": "A sandbox game for collaboratively building & exploring spaces",
+      "startDate": "2023-03-01",
+      "keywords": [
+        "Rust",
+        "Bevy",
+        "WGSL",
+        "Peer-to-Peer",
+        "Game Design"
+      ],
+      "highlights": [
+        "A sandbox game for collaboratively building & exploring spaces",
+        "Uses P2P networking to connect players",
+        "Currently working on collaborative, networked level editing tools"
+      ]
+    }
+  ],
+  "interests": [
+    {
+      "name": "Music",
+      "keywords": [
+        "Piano",
+        "Guitar",
+        "French Horn"
+      ]
+    },
+    {
+      "name": "Writing"
+    },
+    {
+      "name": "Hiking",
+      "keywords": [
+        "Yellowstone",
+        "OSMP - Boulder, CO",
+        "Appalachian Mountains"
+      ]
+    },
+    {
+      "name": "Design"
+    },
+    {
+      "name": "Electronics"
     }
   ],
   "meta": {
