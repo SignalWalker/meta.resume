@@ -81,7 +81,8 @@
         "Rust",
         "Python",
         "UI",
-        "Distributed"
+        "Distributed",
+        "ROS"
       ],
       "highlights": [
         "Developed software for real-time geographical analysis of elevation data gathered from a physical box of sand, the results of which were projected back onto the sandbox",
