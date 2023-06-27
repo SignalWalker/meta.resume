@@ -91,7 +91,7 @@
         "Used Rust to implement network I/O for the above applications",
         "Used Python to implement geograpical analysis functions and to render user interfaces",
         "Documented processes used to implement the above, for future implementors",
-        "Developed and documented a process for calibrating a LiDAR + multispectral camera assembly for use in drone imagine of foliage"
+        "Developed and documented a process for calibrating a LiDAR + multispectral camera assembly with ROS for use in drone imagine of foliage"
       ]
     }
   ],
