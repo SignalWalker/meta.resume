@@ -243,6 +243,22 @@
         "Uses P2P networking to connect players",
         "Currently working on collaborative, networked level editing tools"
       ]
+    },
+    {
+      "name": "Melia",
+      "description": "An http server for serving blog posts rendered from a variety of markup languages",
+      "url": "https://github.com/SignalWalker/melia",
+      "startDate": "2022-12-12",
+      "keywords": [
+        "Rust",
+        "Nix",
+        "HTTP",
+        "HTML",
+        "systemd"
+      ],
+      "highlights": [
+        "An http server for serving blog posts rendered from a variety of markup languages"
+      ]
     }
   ],
   "interests": [

@@ -1,6 +1,10 @@
 {
+  "scripts": {
+    "to-pdf": "npx resumed validate && npx resumed render -o _site/index.html && node pdf.js"
+  },
   "dependencies": {
     "jsonresume-theme-stackoverflow": "github:phoinixi/jsonresume-theme-stackoverflow",
+    "puppeteer": "^20.7.3",
     "resumed": "^3.0.1"
   }
 }

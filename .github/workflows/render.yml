@@ -42,6 +42,10 @@ jobs:
         mkdir _site
         npx resumed render resume.json -o _site/index.html
 
+    - name: Render Resume PDF
+      run: |
+        npm run to-pdf
+
     - name: Upload Artifact
       uses: actions/upload-pages-artifact@v1
 
