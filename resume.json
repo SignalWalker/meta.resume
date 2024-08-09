@@ -176,6 +176,42 @@
       ]
     },
     {
+      "type": "application",
+      "name": "Troposphere",
+      "description": "Peer-to-Peer Messaging and Collaborative Drawing App",
+      "url": "https://git.ashwalker.net/Ash/troposphere",
+      "startDate": "2024-03-01",
+      "keywords": [
+        "Rust",
+        "P2P",
+        "HTML",
+        "CSS",
+        "Javascript"
+      ],
+      "highlights": [
+        "Uses OCapN for efficient asynchronous I/O across multiple peers",
+        "Using Rust, HTML, and Javascript to package project for both desktop and browser"
+      ]
+    },
+    {
+      "type": "library",
+      "name": "Rexa",
+      "description": "Rust implementation of OCapN, a specification for distributed communication",
+      "url": "https://git.ashwalker.net/Ash/rexa",
+      "startDate": "2024-01-16",
+      "keywords": [
+        "Rust",
+        "Network",
+        "OCapN",
+        "CapTP"
+      ],
+      "highlights": [
+        "First Rust implementation of OCapN",
+        "Efficient management of asynchronous promises between multiple clients",
+        "Automatic generation of serialization/deserializtion functions for arbitrary data structures"
+      ]
+    }
+    {
       "name": "ashwalker.net",
       "description": "Self-hosted cloud services",
       "url": "https://github.com/SignalWalker/nix.net.ashwalker",
