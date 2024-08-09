@@ -118,7 +118,7 @@
     },
     {
       "name": "Network Programming",
-      "level": "Intermediate",
+      "level": "Advanced",
       "keywords": [
         "TCP",
         "UDP",
@@ -127,7 +127,7 @@
     },
     {
       "name": "System Administration",
-      "level": "Intermediate",
+      "level": "Advanced",
       "keywords": [
         "Linux",
         "Nix",
@@ -138,7 +138,7 @@
     },
     {
       "name": "Web Development",
-      "level": "Beginner",
+      "level": "Intermediate",
       "keywords": [
         "HTML",
         "CSS",
