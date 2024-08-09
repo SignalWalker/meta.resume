@@ -210,7 +210,7 @@
         "Efficient management of asynchronous promises between multiple clients",
         "Automatic generation of serialization/deserializtion functions for arbitrary data structures"
       ]
-    }
+    },
     {
       "name": "ashwalker.net",
       "description": "Self-hosted cloud services",
