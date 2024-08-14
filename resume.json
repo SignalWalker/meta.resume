@@ -55,7 +55,7 @@
         "Created a cross-platform, userspace NVMe driver in C++ and developed a component for its use within a cross-platform Qt application",
         "Modified a Windows-only Qt application to add native support for Linux",
         "Developed Rust & C++ libraries for working with DJI's drone SDKs",
-        "Developed an application for automatic camera calibratation for object detection using machine learning",
+        "Developed an application for automatic camera calibration for object detection using machine learning",
         "Developed an imgui-based application in Rust & C++ for streaming real-time video from a remote drone platform",
         "Implemented algorithms from academic articles for GPS-based georeferencing of spatial data and transforming that data between various frames of reference",
         "Developed functions for performing YOLOv5 image processing with TensorRT",
