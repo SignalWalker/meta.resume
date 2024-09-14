@@ -6,6 +6,12 @@
       url = "github:kamadorueda/alejandra";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    resumed = {
+      type = "github";
+      owner = "rbardini";
+      repo = "resumed";
+      ref = "v3.0.1";
+    };
   };
   outputs = inputs @ {
     self,
@@ -34,14 +40,28 @@
           std = pkgs.lib;
           stdenv = stdenvFor pkgs;
         in {
+          resumed = pkgs.buildNpmPackage {
+            pname = "resumed";
+            version = "3.0.1";
+            nodejs = pkgs.nodejs_18;
+            npmBuildScript = "build";
+          };
           "ashwalker-resume" = pkgs.buildNpmPackage {
             pname = "ashwalker-resume";
             version = "1.0.0";
             src = ./.;
             nodejs = pkgs.nodejs_18;
+            npmDepsHash = "sha256-JA1be9oUDTNdgNpBC+WpDJefXiXeLmZV1EE9gCCe4Nc=";
             npmBuildScript = "resumed";
             npmBuildFlags = ["render" "$src/resume.json" "-o" "$out/resume.html"];
+            makeCacheWritable = true;
+            env = {
+              PUPPETEER_SKIP_DOWNLOAD = toString 1;
+            };
+            nativeBuildInputs = with pkgs; [
+            ];
           };
+          default = self.packages.${system}."ashwalker-resume";
         })
         nixpkgsFor;
       devShells =
