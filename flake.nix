@@ -6,11 +6,9 @@
       url = "github:kamadorueda/alejandra";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    resumed = {
-      type = "github";
-      owner = "rbardini";
-      repo = "resumed";
-      ref = "v3.0.1";
+    jsonresume-theme-stackoverflow = {
+      url = "github:phoinixi/jsonresume-theme-stackoverflow";
+      flake = false;
     };
   };
   outputs = inputs @ {
@@ -32,7 +30,7 @@
           crossSystem = system;
           overlays = [];
         });
-      stdenvFor = pkgs: pkgs.stdenvAdapters.useMoldLinker pkgs.llvmPackages_latest.stdenv;
+      stdenvFor = pkgs: pkgs.stdenv;
     in {
       formatter = std.mapAttrs (system: pkgs: pkgs.default) inputs.alejandra.packages;
       packages =
@@ -40,26 +38,37 @@
           std = pkgs.lib;
           stdenv = stdenvFor pkgs;
         in {
-          resumed = pkgs.buildNpmPackage {
-            pname = "resumed";
-            version = "3.0.1";
-            nodejs = pkgs.nodejs_18;
-            npmBuildScript = "build";
-          };
+          # "jsonresume-theme-stackoverflow" = pkgs.buildNpmPackage {
+          #   pname = "jsonresume-theme-stackoverflow";
+          #   version = inputs.jsonresume-theme-stackoverflow.shortRev;
+          #   src = inputs.jsonresume-theme-stackoverflow;
+          #   npmDepsHash = "sha256-H3bVs5VmK5eEPvxF85E8v+vAkGQPDjWM+mEKOJ95RMw=";
+          #   dontNpmBuild = true;
+          # };
           "ashwalker-resume" = pkgs.buildNpmPackage {
             pname = "ashwalker-resume";
             version = "1.0.0";
             src = ./.;
-            nodejs = pkgs.nodejs_18;
+            nativeBuildInputs =
+              []
+              ++ (with pkgs; [
+                resumed
+              ]);
+            nodejs = pkgs.nodejs_22;
             npmDepsHash = "sha256-JA1be9oUDTNdgNpBC+WpDJefXiXeLmZV1EE9gCCe4Nc=";
-            npmBuildScript = "resumed";
-            npmBuildFlags = ["render" "$src/resume.json" "-o" "$out/resume.html"];
             makeCacheWritable = true;
             env = {
               PUPPETEER_SKIP_DOWNLOAD = toString 1;
             };
-            nativeBuildInputs = with pkgs; [
-            ];
+            preBuild = ''
+              resumed validate $src/resume.json
+            '';
+            buildPhase = ''
+              runHook preBuild
+              resumed render $src/resume.json -o $out
+              runHook postBuild
+            '';
+            dontInstall = true;
           };
           default = self.packages.${system}."ashwalker-resume";
         })

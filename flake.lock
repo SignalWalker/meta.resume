@@ -60,6 +60,22 @@
         "type": "github"
       }
     },
+    "jsonresume-theme-stackoverflow": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1718140413,
+        "narHash": "sha256-Zc+QDH+7GM5G3KIhb5VUmIdOvxRJcJFU8yFd4pom6e8=",
+        "owner": "phoinixi",
+        "repo": "jsonresume-theme-stackoverflow",
+        "rev": "0720f22cfaa118969d328b43b497e32b689ddbf7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "phoinixi",
+        "repo": "jsonresume-theme-stackoverflow",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1726206720,
@@ -79,6 +95,7 @@
     "root": {
       "inputs": {
         "alejandra": "alejandra",
+        "jsonresume-theme-stackoverflow": "jsonresume-theme-stackoverflow",
         "nixpkgs": "nixpkgs"
       }
     },
