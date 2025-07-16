@@ -108,7 +108,8 @@
       "keywords": [
         "Vulkan",
         "GLSL",
-        "WGSL"
+        "WGSL",
+        "glTF"
       ]
     },
     {
@@ -138,6 +139,9 @@
         "HTML",
         "CSS",
         "Javascript",
+        "TypeScript",
+        "Node.js",
+        "Eleventy",
         "Django",
         "Elixir"
       ]
