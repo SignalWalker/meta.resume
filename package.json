@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "to-pdf": "npx resumed validate && npx resumed render -o _site/index.html && node pdf.js",
-    "build": "npx resumed render resume.json"
+    "to-pdf": "resumed validate && resumed render -o _site/index.html && node pdf.js",
+    "build": "resumed render resume.json"
   },
   "dependencies": {
     "jsonresume-theme-stackoverflow": "github:phoinixi/jsonresume-theme-stackoverflow",

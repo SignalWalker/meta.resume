@@ -38,13 +38,13 @@
           std = pkgs.lib;
           stdenv = stdenvFor pkgs;
         in {
-          # "jsonresume-theme-stackoverflow" = pkgs.buildNpmPackage {
-          #   pname = "jsonresume-theme-stackoverflow";
-          #   version = inputs.jsonresume-theme-stackoverflow.shortRev;
-          #   src = inputs.jsonresume-theme-stackoverflow;
-          #   npmDepsHash = "sha256-H3bVs5VmK5eEPvxF85E8v+vAkGQPDjWM+mEKOJ95RMw=";
-          #   dontNpmBuild = true;
-          # };
+          "jsonresume-theme-stackoverflow" = pkgs.buildNpmPackage {
+            pname = "jsonresume-theme-stackoverflow";
+            version = inputs.jsonresume-theme-stackoverflow.shortRev;
+            src = inputs.jsonresume-theme-stackoverflow;
+            npmDepsHash = "sha256-H3bVs5VmK5eEPvxF85E8v+vAkGQPDjWM+mEKOJ95RMw=";
+            dontNpmBuild = true;
+          };
           "ashwalker-resume" = pkgs.buildNpmPackage {
             pname = "ashwalker-resume";
             version = "1.0.0";
@@ -63,7 +63,8 @@
             preBuild = ''
               resumed validate $src/resume.json
             '';
-            buildPhase = ''
+            buildPhase = let
+            in ''
               runHook preBuild
               resumed render $src/resume.json -o $out
               runHook postBuild
